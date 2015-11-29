@@ -11,10 +11,16 @@ module NavigationHelpers
   # step definition in web_steps.rb
   #
   def path_to(page_name)
+    puts ">>> " + page_name.to_s
     case page_name
+    
+    when /^the edit page for "Alien"/
+       '/movies/3/edit/'
+    # when /^the movies page$/ then '/movies'       
 
     when /^the home\s?page$/
       '/'
+      
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
@@ -33,6 +39,13 @@ module NavigationHelpers
       end
     end
   end
+  
+  def match_rails_path_for(page_name)
+    if page_name.match(/the edit page for "Alien"/)
+      return send "#{$1.gsub(" ", "_")}_path" rescue nil
+    end
+  end
+  
 end
 
 World(NavigationHelpers)

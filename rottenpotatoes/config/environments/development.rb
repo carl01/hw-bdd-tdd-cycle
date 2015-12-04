@@ -28,4 +28,7 @@ Rottenpotatoes::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  # CI added on 151204
+  config.reload_classes_only_on_change = false
 end

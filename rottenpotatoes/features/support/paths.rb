@@ -16,7 +16,13 @@ module NavigationHelpers
     
     when /^the edit page for "Alien"/
        '/movies/3/edit/'
-    # when /^the movies page$/ then '/movies'       
+    # when /^the movies page$/ then '/movies'
+    
+    when /^the details page for "Star Wars"/
+       '/movies/2/'
+       
+    when /^the Similar Movies page for "Star Wars"/
+       '/movies/2/find_with_same_director'
 
     when /^the home\s?page$/
       '/'

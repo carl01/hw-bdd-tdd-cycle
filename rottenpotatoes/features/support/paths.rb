@@ -19,13 +19,16 @@ module NavigationHelpers
     # when /^the movies page$/ then '/movies'
     
     when /^the details page for "Star Wars"/
-       '/movies/2/'
+       '/movies/1/'
+       
+    when /^the details page for "Alien"/
+       '/movies/3/'       
        
     when /^the Similar Movies page for "Star Wars"/
-       '/movies/2/find_with_same_director'
+       '/movies/1/find_with_same_director'
 
     when /^the home\s?page$/
-      '/'
+      '/movies'
       
 
     # Add more mappings here.

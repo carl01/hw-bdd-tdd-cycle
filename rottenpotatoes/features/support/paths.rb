@@ -25,8 +25,7 @@ module NavigationHelpers
        '/movies/3/'       
        
     when /^the Similar Movies page for "Star Wars"/
-       '/movies/1/find_with_same_director'
-
+       '/movies/find_with_same_director/1'
     when /^the home\s?page$/
       '/movies'
       

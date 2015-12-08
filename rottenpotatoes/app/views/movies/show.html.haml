@@ -22,9 +22,8 @@
 = link_to 'Back to movie list', movies_path
 
 -# Added on 151204
-%p
 - if @movie.director != nil and @movie.director != ""
-  = link_to 'Find Movies With Same Director', "/movies/#{@movie.id}/find_with_same_director"
+  %p= link_to 'Find Movies With Same Director', "/movies/find_with_same_director/#{@movie.id}"
 - else
-  = link_to 'Find Movies With Same Director', '/movies'
+  %p= link_to 'Find Movies With Same Director', '/movies'
   - flash[:notice] = "'#{@movie.title}' has no director info"
